@@ -1,4 +1,5 @@
 import express from 'express';
+import AppError from '../utils/appError';
 
 const errorController = (
   err: AppError,
@@ -11,8 +12,8 @@ const errorController = (
 
   res.status(err.statusCode).json({
     status: err.status,
-    error: err,
-    stack: err.stack,
+    // error: err,
+    // stack: err.stack,
     message: err.message,
   });
 };

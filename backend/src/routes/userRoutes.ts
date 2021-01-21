@@ -1,9 +1,9 @@
 import express from 'express';
-import { signup } from '../controllers/authControler';
+import { signup } from '../controllers/userControler';
+// import fileUpload from '../utils/s3Upload';
 
 const router = express.Router();
 
 router.post('/signup', signup);
-router.post('/login');
 
 export default router;

@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import errorController from './controllers/errorController';
 import userRoutes from './routes/userRoutes';
+import AppError from './utils/appError';
 
 dotenv.config();
 const app = express();

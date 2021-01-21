@@ -24,4 +24,4 @@ exports.signup = catchAsync_1.default(async (req, res, next) => {
         data: { newUser },
     });
 });
-//# sourceMappingURL=authControler.js.map
+//# sourceMappingURL=userControler.js.map
