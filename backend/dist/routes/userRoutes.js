@@ -8,5 +8,8 @@ const userControler_1 = require("../controllers/userControler");
 // import fileUpload from '../utils/s3Upload';
 const router = express_1.default.Router();
 router.post('/signup', userControler_1.signup);
+router.get('/', userControler_1.getAllUsers);
+router.delete('/:id', userControler_1.deleteUser);
+router.patch('/:id', userControler_1.updateUser);
 exports.default = router;
 //# sourceMappingURL=userRoutes.js.map
