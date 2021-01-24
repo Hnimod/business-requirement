@@ -2,6 +2,7 @@ import multer from 'multer';
 import multerS3 from 'multer-s3';
 import aws from 'aws-sdk';
 import { v4 as uuidv4 } from 'uuid';
+import dotenv from 'dotenv';
 
 interface mimeMap {
   [key: string]: string;
@@ -12,6 +13,8 @@ const MIME_TYPE_MAP: mimeMap = {
   'image/jpeg': '.jpeg',
   'image/jpg': '.jpg',
 };
+
+dotenv.config();
 
 aws.config.update({
   accessKeyId: process.env.AWS_ACCESS_KEY_ID,

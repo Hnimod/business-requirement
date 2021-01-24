@@ -6,6 +6,7 @@ export interface IUser extends Document {
   species: string;
   race: string;
   born: string;
+  timeline: string;
   homeworld: string;
   gender: string;
   height: string;
@@ -20,12 +21,17 @@ const UserSchema: Schema = new mongoose.Schema(
     species: {
       type: String,
       required: true,
-      enum: ['Human', 'Humanoid', 'Aliens'],
+      enum: ['human', 'humanoid', 'aliens'],
     },
     race: { type: String, required: true },
     born: { type: String, required: true },
+    timeline: { type: String, required: true },
     homeworld: { type: String, required: true },
-    gender: { type: String, required: true, enum: ['Male', 'Female', 'Other'] },
+    gender: {
+      type: String,
+      required: true,
+      enum: ['male', 'female', 'others'],
+    },
     height: { type: String, required: true },
     mass: { type: String, required: true },
     avatar: { type: String, required: true },

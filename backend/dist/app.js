@@ -10,6 +10,7 @@ const mongoose_1 = __importDefault(require("mongoose"));
 const errorController_1 = __importDefault(require("./controllers/errorController"));
 const userRoutes_1 = __importDefault(require("./routes/userRoutes"));
 const appError_1 = __importDefault(require("./utils/appError"));
+const cors_1 = __importDefault(require("cors"));
 dotenv_1.default.config();
 const app = express_1.default();
 if (process.env.NODE_ENV === 'development') {
@@ -32,7 +33,7 @@ else {
 }
 /////////////////////////////////////////////////////////////////////
 app.use(express_1.default.json());
-app.use('/api/users', userRoutes_1.default);
+app.use('/api/users', cors_1.default(), userRoutes_1.default);
 app.all('*', (req, res, next) => {
     next(new appError_1.default(`Cannot find ${req.originalUrl}`, 404));
 });

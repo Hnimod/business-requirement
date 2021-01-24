@@ -5,8 +5,10 @@ import mongoose from 'mongoose';
 import errorController from './controllers/errorController';
 import userRoutes from './routes/userRoutes';
 import AppError from './utils/appError';
+import cors from 'cors';
 
 dotenv.config();
+
 const app = express();
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
@@ -32,7 +34,7 @@ if (process.env.DB_STRING && process.env.DB_PASSWORD) {
 /////////////////////////////////////////////////////////////////////
 app.use(express.json());
 
-app.use('/api/users', userRoutes);
+app.use('/api/users', cors(), userRoutes);
 
 app.all('*', (req, res, next) => {
   next(new AppError(`Cannot find ${req.originalUrl}`, 404));

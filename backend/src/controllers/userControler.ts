@@ -3,6 +3,11 @@ import User, { IUser } from '../models/userModel';
 import AppError from '../utils/appError';
 
 export const signup = catchAsync(async (req, res, next) => {
+  const user = await User.findOne({ email: req.body.email });
+  if (user) return next(new AppError('Email already exist', 409));
+
+  console.log(req.file);
+
   const newUser: IUser = await User.create({
     name: req.body.name,
     email: req.body.email,
@@ -10,15 +15,16 @@ export const signup = catchAsync(async (req, res, next) => {
     race: req.body.race,
     born: req.body.born,
     homeworld: req.body.homeworld,
+    timeline: req.body.timeline,
     gender: req.body.gender,
     height: req.body.height,
     mass: req.body.mass,
-    avatar: req.body.avatar,
+    avatar: (req as any).file.location,
   });
 
   res.status(200).json({
     status: 'success',
-    data: { newUser },
+    newUser,
   });
 });
 
@@ -27,7 +33,8 @@ export const getAllUsers = catchAsync(async (req, res, next) => {
 
   res.status(200).json({
     status: 'success',
-    data: { nbResults: users.length, users },
+    nbResults: users.length,
+    users,
   });
 });
 
@@ -51,6 +58,6 @@ export const updateUser = catchAsync(async (req, res, next) => {
 
   res.status(200).json({
     status: 'success',
-    data: { user },
+    user,
   });
 });

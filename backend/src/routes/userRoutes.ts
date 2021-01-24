@@ -5,11 +5,11 @@ import {
   deleteUser,
   updateUser,
 } from '../controllers/userControler';
-// import fileUpload from '../utils/s3Upload';
+import fileUpload from '../utils/s3Upload';
 
 const router = express.Router();
 
-router.post('/signup', signup);
+router.post('/signup', fileUpload.single('avatar'), signup);
 router.get('/', getAllUsers);
 router.delete('/:id', deleteUser);
 router.patch('/:id', updateUser);

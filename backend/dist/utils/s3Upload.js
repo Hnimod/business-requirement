@@ -7,11 +7,13 @@ const multer_1 = __importDefault(require("multer"));
 const multer_s3_1 = __importDefault(require("multer-s3"));
 const aws_sdk_1 = __importDefault(require("aws-sdk"));
 const uuid_1 = require("uuid");
+const dotenv_1 = __importDefault(require("dotenv"));
 const MIME_TYPE_MAP = {
     'image/png': '.png',
     'image/jpeg': '.jpeg',
     'image/jpg': '.jpg',
 };
+dotenv_1.default.config();
 aws_sdk_1.default.config.update({
     accessKeyId: process.env.AWS_ACCESS_KEY_ID,
     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
