@@ -2,6 +2,9 @@
 
 A full-stack project, collect information of potential new recruitment for galactic empire. Built with Typescript, NodeJS, MongoDB, ReactJS, styled-components, axios.
 
+- Backend: https://galactic-gate.herokuapp.com/api/users 
+- Frontend: https://galactic-gate.web.app/signup
+
 ## Features
 
 - SignUp to enlist to emprial army.
@@ -13,24 +16,16 @@ A full-stack project, collect information of potential new recruitment for galac
 
 - Fill in all information in order to proceed.
 
-    <img src="./readme-images/login.jpg"/>
+    <img src="./readme-images/signup.jpg"/>
 
-- The main search page will dispay all the results that match search key and filters (default: search all in stories sorted by points in time-range of all time.
+- Click on the "Galactic Gate" title to navigate to users page
 
-    <img src="./readme-images/main.jpg"/>
+    <img src="./readme-images/navigate-users.jpg"/>
 
-- Example search: Search for "harry" in stories sorted by points in time-range of past year
+- Users page display all enlisted users
 
-    <img src="./readme-images/example.jpg"/>
+    <img src="./readme-images/users.jpg"/>
 
-- Scroll to bottom to navigate through different pages
+- Click on signup icon to navigate back to signup
 
-    <img src="./readme-images/pagination.jpg"/>
-
-- Click on the title of article to see all comments
-
-    <img src="./readme-images/comments.jpg"/>
-
-- Click on the title of article in the comment page to open source link in a new tab
-
-    <img src="./readme-images/source.jpg"/>
+    <img src="./readme-images/navigate-signup.jpg"/>
