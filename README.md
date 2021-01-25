@@ -4,6 +4,7 @@ A full-stack project, collect information of potential new recruitment for galac
 
 - Backend: https://galactic-gate.herokuapp.com/api/users 
 - Frontend: https://galactic-gate.web.app/signup
+- API endpoint doc: https://documenter.getpostman.com/view/13161986/TW6tNAmY#fed8fd0a-b283-4202-9563-d468031dc386
 
 ## Features
 
