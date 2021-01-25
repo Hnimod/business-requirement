@@ -3,7 +3,7 @@
 A full-stack project, collect information of potential new recruitment for galactic empire. Built with Typescript, NodeJS, MongoDB, ReactJS, styled-components, axios.
 
 - Backend: https://galactic-gate.herokuapp.com/api/users 
-- Frontend: https://galactic-gate.web.app/signup
+- Frontend: https://galactic-gate.web.app/
 - API endpoint doc: https://documenter.getpostman.com/view/13161986/TW6tNAmY#fed8fd0a-b283-4202-9563-d468031dc386
 
 ## Features
