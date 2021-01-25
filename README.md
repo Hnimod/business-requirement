@@ -1,22 +1,17 @@
 # Galactic Gate: stormtrooper recruitment portal
 
-A full-stack project, collect information for potential new recruitment . Built with ReactJS, styled-components, axios, react-icons.
+A full-stack project, collect information of potential new recruitment for galactic empire. Built with Typescript, NodeJS, MongoDB, ReactJS, styled-components, axios.
 
 ## Features
 
-- Log-in/out. Keep logging in for 60 minutes, then auto log-out.
-- Support search for stories and comments
-- Display search results coresponse with filters and default sorted by points.
-- Navigate through different pages of the results.
-- Highlisht searched key in title and comments.
-- Display all the comments coresponse with the article when click on the title.
-- Open article's source link in a new tab.
+- SignUp to enlist to emprial army.
+- Support avatar upload
+- Display all users have enlisted
   <br/>
 
 ## How to use
 
-- Login with username: pizza; password: 123456
-- Expiration time (60 mins) will be stored in local storage, app will auto log out after that time.
+- Fill in all information in order to proceed.
 
     <img src="./readme-images/login.jpg"/>
 
