@@ -8,7 +8,7 @@ A full-stack project, collect information of potential new recruitment for galac
 
 ## Features
 
-- SignUp to enlist to emprial army.
+- SignUp to enlist to imperial army.
 - Support avatar upload
 - Display all users have enlisted
   <br/>
